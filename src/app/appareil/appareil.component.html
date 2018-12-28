@@ -3,7 +3,8 @@
                 'list-group-item-danger': appareilStatus === 'éteint'}">
   
      <h4 [ngStyle]="{color: getColor()}">Appareil : {{ appareilName }} -- Statut : {{ getStatus() }}</h4>
-  
+
+      
      <button class="btn btn-sm btn-success" 
              (click)="onSwitchOn()" 
              [disabled]="appareilStatus === 'allumé'" >Allumer</button>
@@ -12,6 +13,8 @@
              (click)="onSwitchOff()" 
              [disabled]="appareilStatus === 'éteint'" >Eteindre</button>
 
+        
+        <a class="btn btn-info" href="#" role="button" [routerLink]="[id]">Détail</a>
              
   
 </li>
